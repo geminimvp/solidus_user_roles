@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :header_actions do %>
-  <% if can?(:create, Spree::Role)%>
+  <% if can?(:admin, Spree::Role) && can?(:create, Spree::Role) %>
     <li>
       <%= link_to new_object_url, class: 'btn btn-primary btn-rounded', id: 'admin_new_user_role_link' do %>
         <i class="icon icon-plus-white mr-2 align-middle"></i>
