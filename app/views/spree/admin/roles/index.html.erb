@@ -2,10 +2,13 @@
   <%= Spree.t(:user_roles) %>
 <% end %>
 
-<% content_for :page_actions do %>
+<% content_for :header_actions do %>
   <% if can?(:admin, Spree::Role) && can?(:create, Spree::Role) %>
     <li>
-      <%= button_link_to Spree.t(:new_user_role), new_admin_role_url, :icon => 'plus', :id => 'admin_new_role_link' %>
+      <%= link_to new_object_url, class: 'btn btn-primary btn-rounded', id: 'admin_new_user_role_link' do %>
+        <i class="icon icon-plus-white mr-2 align-middle"></i>
+        <span class="align-middle"><%= t('spree.new_user_role') %></span>
+      <% end %>
     </li>
   <% end %>
 <% end %>
