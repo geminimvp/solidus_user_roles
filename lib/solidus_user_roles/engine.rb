@@ -8,6 +8,7 @@ module SolidusUserRoles
     end
 
     def self.load_custom_permissions
+      rescue ActiveRecord::NoDatabaseError
       if ActiveRecord::Base.connection.tables.include?('spree_roles')
         Spree::Role.non_base_roles.each do |role|
           if SolidusSupport.solidus_gem_version < Gem::Version.new('2.5.x')
