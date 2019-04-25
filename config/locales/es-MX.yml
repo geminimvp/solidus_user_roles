@@ -1,0 +1,15 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es-MX:
+  spree:
+    new_user_role: Nuevo Rol de Usuario
+    back_to_roles_list: Regresar a la Lista de Roles
+    permissions: Permisos
+    user_roles: Roles de Usuario
+    editing_user_role: Editando Rol de Usuario
+    display_permissions: Mostrar Permisos
+    management_permissions: Permisos de Gestión
+    admin:
+      tab:
+        roles: Roles
